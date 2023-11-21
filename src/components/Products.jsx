@@ -1,4 +1,4 @@
-import { AddToCartIcon, RemoveFromCartIcon } from "./icon";
+import { AddToCartIcon } from "./Icons";
 import './Products.css';
 
 export const Products = ({ products }) => {

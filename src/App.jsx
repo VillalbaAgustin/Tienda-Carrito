@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { products as initialProducts } from "./mocks/products.json";
-import { Footer, Header, Products } from "./components";
+import { Cart, Footer, Header, Products } from "./components";
 import { IS_DEVELOPMENT } from './config.js'
 import { useFilters } from "./hooks";
 
@@ -23,6 +23,7 @@ function App() {
   return (
     <>
       <Header/>
+      <Cart/>
       <Products products={filteredProducts} />
       {IS_DEVELOPMENT && <Footer/>}
     </>
