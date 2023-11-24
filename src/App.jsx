@@ -3,6 +3,7 @@ import { products as initialProducts } from "./mocks/products.json";
 import { Cart, Footer, Header, Products } from "./components";
 import { IS_DEVELOPMENT } from './config.js'
 import { useFilters } from "./hooks";
+import { CartProviders } from "./context/cart.jsx";
 
 
 function App() {
@@ -21,12 +22,12 @@ function App() {
   const filteredProducts = filterProducts(products);
 
   return (
-    <>
+    <CartProviders>
       <Header/>
       <Cart/>
       <Products products={filteredProducts} />
-      {IS_DEVELOPMENT && <Footer/>}
-    </>
+      {/* {IS_DEVELOPMENT && <Footer/>} */}
+    </CartProviders>
   );
 }
 
