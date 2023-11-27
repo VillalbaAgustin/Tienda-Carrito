@@ -21,7 +21,7 @@ function CartItem({ thumbnail, price, title, quantity, addToCart }) {
 
 export const Cart = () => {
   const { cart, addToCart, removeFromCart, clearCart } = useCart();
-  console.log(cart);
+  // console.log(cart);
   const cartCheckBoxId = useId();
   return (
     <>
